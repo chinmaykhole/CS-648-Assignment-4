@@ -1,21 +1,33 @@
 body {
-    margin: 20px auto;
     display: grid;
     font-family: Arial, Helvetica, sans-serif;
     width: 960px;
+    margin: 0;
     grid-gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 85px 200px auto 75px;
+    margin: 20px auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 80px 225px auto 50px;
 }
 div, nav ul, footer, a {
     background: silver;
 }
-
+a {
+    color: black;
+    text-decoration: none;
+}
+h1 {
+    font-size: 2.8rem;
+}
+#logo {
+    grid-column: 1/2; 
+    grid-row: 1/2; 
+}
 nav {
     grid-column: 3/5; 
-    grid-row: 1/2;
+    grid-row: 1/2; 
     align-self: center;
 }
+
 nav ul {
     list-style-type: none;
     display: grid;
@@ -25,32 +37,15 @@ nav ul {
     justify-items: center;
     align-content: center;
 }
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-h1 {
-    font-size: 2.8rem;
-}
-
-
-#img {
-    grid-column: 1/2;
-    grid-row: 1/2;  
-}
-
 header {
     grid-column: 1/5; 
     grid-row: 2/3; 
 }
-
 main {
-    grid-column: 1/5;
-    grid-row: 3/4;  
+    grid-column: 1/5; 
+    grid-row: 3/4; 
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 20px;
     grid-template: repeat(3, 170px) / repeat(3, 1fr);
 }
 footer {
